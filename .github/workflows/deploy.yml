@@ -26,5 +26,5 @@ jobs:
           source ~/my_telex_integration/venv/bin/activate
           sudo apt install python3-pip -y
           pip install -r requirements.txt
-          sudo systemctl restart fastapi
+          sudo systemctl restart cherry
           sudo systemctl restart nginx
