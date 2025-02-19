@@ -1,0 +1,30 @@
+name: CD Pipeline
+
+on:
+
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Deploy via SSH
+      uses: appleboy/ssh-action@v0.1.7
+      with:
+        host: ${{ secrets.SERVER_IP }}
+        username: ${{ secrets.SERVER_USER }}
+        key: ${{ secrets.SERVER_SSH_KEY }}
+        script: |
+          cd ~/my_telex_integration
+          git pull origin main  
+          source ~/my_telex_integration/venv/bin/activate
+          sudo apt install python3-pip -y
+          pip install -r requirements.txt
+          sudo systemctl restart fastapi
+          sudo systemctl restart nginx
