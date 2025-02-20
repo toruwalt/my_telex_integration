@@ -27,7 +27,7 @@ class HelloWorld:
                     "app_description": "A real time error log for CherryPy framework that captures and reports errors and exceptions occurring in a CherryPy application.",
                     "app_logo": "https://github.com/toruwalt/my_telex_integration/blob/main/logo.svg",
                     "app_name": "Errorless Cherry",
-                    "app_url": "URL to the application or service.",
+                    "app_url": "http://137.184.27.66/",
                     "background_color": "#E3E1E6"
                 },
                 "integration_category": "Communication & Collaboration",
