@@ -3,6 +3,18 @@ import cherrypy
 class HelloWorld:
     @cherrypy.expose
     @cherrypy.tools.json_out()
+    def img(self):
+        return """
+        <html>
+            <body>
+                <h1>Hello, World!</h1>
+                <img src="/static/image.jpg" alt="Sample Image">
+            </body>
+        </html>
+        """
+
+    @cherrypy.expose
+    @cherrypy.tools.json_out()
     def index(self):
         telex_json = {
             "data": {
