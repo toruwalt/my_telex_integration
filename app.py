@@ -19,15 +19,15 @@ class HelloWorld:
                 },
                 "integration_category": "Communication & Collaboration",
                 "integration_type": "output",
-                "is_active": false, # type: ignore
+                "is_active": False,
                 "output": [
                 {
                     "label": "output_channel_1",
-                    "value": true # type: ignore
+                    "value": True
                 },
                 {
                     "label": "output_channel_2",
-                    "value": false # type: ignore
+                    "value": False,
                 }
                 ],
                 "key_features": [
@@ -38,7 +38,7 @@ class HelloWorld:
                 ],
                 "permissions": {
                 "monitoring_user": {
-                    "always_online": true, # type: ignore
+                    "always_online": True,
                     "display_name": "Performance Monitor"
                 }
                 },
@@ -46,7 +46,7 @@ class HelloWorld:
                 {
                     "label": "Do you want to continue",
                     "type": "checkbox",
-                    "required": true, # type: ignore
+                    "required": True,
                     "default": "Yes"
                 },
                 ],
