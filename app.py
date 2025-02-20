@@ -2,9 +2,9 @@ import cherrypy
 
 class HelloWorld:
     @cherrypy.expose
-    @cherrypy.tools.json_out()
     def img(self):
-        return """
+        return 
+        """
         <html>
             <body>
                 <h1>Hello, World!</h1>
