@@ -3,6 +3,7 @@ import cherrypy
 class HelloWorld:
     @cherrypy.expose
     def img(self):
+        cherrypy.response.headers['Content-Type'] = 'text/html'
         return 
         """
         <html>
