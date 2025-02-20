@@ -32,7 +32,7 @@ class HelloWorld:
                 },
                 "integration_category": "Communication & Collaboration",
                 "integration_type": "output",
-                "is_active": False,
+                "is_active": True,
                 "output": [
                 {
                     "label": "output_channel_1",
@@ -56,6 +56,12 @@ class HelloWorld:
                 }
                 },
                 "settings": [
+                {
+                    "label": "Output to where",
+                    "type": "text",
+                    "required": True,
+                    "default": "1234567890"
+                },
                 {
                     "label": "Do you want to continue",
                     "type": "checkbox",
