@@ -12,10 +12,10 @@ class HelloWorld:
                 },
                 "descriptions": {
                     "app_description": "A real time error log for CherryPy framework that captures and reports errors and exceptions occurring in a CherryPy application.",
-                    "app_logo": "URL to the application logo.",
+                    "app_logo": "http://137.184.27.66/static/logo.svg",
                     "app_name": "Errorless Cherry",
                     "app_url": "URL to the application or service.",
-                    "background_color": "#HEXCODE"
+                    "background_color": "#E3E1E6"
                 },
                 "integration_category": "Communication & Collaboration",
                 "integration_type": "output",
@@ -59,7 +59,15 @@ class HelloWorld:
 
 if __name__ == "__main__":
     cherrypy.config.update({
-        'server.socket_host': '127.0.0.1',  # Bind to localhost
-        'server.socket_port': 8080,        # Run on port 8080
+        'server.socket_host': '127.0.0.1',
+        'server.socket_port': 8080,
     })
-    cherrypy.quickstart(HelloWorld())
+
+    config = {
+        '/static': {
+            'tools.staticdir.on': True,
+            'tools.staticdir.dir': '/',
+        }
+    }
+
+    cherrypy.quickstart(HelloWorld(), '/', config)
